@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated Blog</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% else %}
+        {% for section in extracted_text %}
+            <p>{{ section }}</p>
+        {% endfor %}
+
+        {% if tones %}
+            <h2>Generated Tones</h2>
+            <ul>
+                {% for tone in tones %}
+                    <li>{{ tone }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <h1>Audio Extraction and Transcription</h1>
+    <form action="/extract_audio" method="post" enctype="multipart/form-data">
+        <label for="audioFile">Upload Video (MP4, MKV, etc.):</label>
+        <input type="file" name="file" id="audioFile" accept=".mp4, .mkv, .avi" required>
+        <br>
+        <button type="submit">Extract Audio and Transcribe</button>
+    </form>
+
+    <hr>
+
+    <h1>PDF Text Extraction</h1>
+    <form action="/extract_pdf" method="post" enctype="multipart/form-data">
+        <label for="pdfFile">Upload PDF:</label>
+        <input type="file" name="file" id="pdfFile" accept=".pdf" required>
+        <br>
+        <button type="submit">Extract Text from PDF</button>
+    </form>
+</body>
+</html>
